@@ -1,0 +1,9 @@
+{
+  "name": "fashion-store-admin-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "audit:demo": "node scripts/audit-demo.mjs"
+  }
+}
