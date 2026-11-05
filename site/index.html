@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Локальная демонстрация обработки тестовых заказов.">
+    <title>Заказы — демо</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="page-shell" aria-labelledby="page-title">
+      <header class="page-header">
+        <p class="eyebrow">Локальный макет</p>
+        <div class="header-row">
+          <div>
+            <h1 id="page-title">Заказы на сегодня</h1>
+            <p class="header-copy">Рабочий стол с фиктивными карточками</p>
+          </div>
+          <button class="reset-button" type="button" data-reset>Сбросить изменения</button>
+        </div>
+        <p class="demo-notice">Демо-версия. Данные тестовые и не отправляются на сервер</p>
+      </header>
+
+      <section class="filters-section" aria-labelledby="filter-title">
+        <div class="section-heading">
+          <p class="eyebrow" id="filter-title">Очередь</p>
+          <p class="status-journey" aria-label="Этапы обработки: новый, в работе, собран, отменён">
+            <span>новый</span><span aria-hidden="true">→</span><span>в работе</span><span aria-hidden="true">→</span><span>собран</span>
+          </p>
+        </div>
+        <div class="filter-list" id="filter-list" aria-label="Фильтр по статусу"></div>
+      </section>
+
+      <p class="storage-note" id="storage-note" hidden aria-live="polite"></p>
+
+      <section class="orders-section" aria-label="Список тестовых заказов">
+        <div class="section-heading orders-heading">
+          <p class="eyebrow">Карточки</p>
+          <p id="visible-summary" class="visible-summary" aria-live="polite"></p>
+        </div>
+        <div class="order-list" id="order-list" aria-live="polite"></div>
+      </section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
